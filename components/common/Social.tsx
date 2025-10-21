@@ -45,9 +45,9 @@ export default function Social({
 
   return (
     <section className="py-8">
-      <div className="max-w-xl mx-auto text-center">
+      <div className="">
         <TooltipProvider>
-          <div className="flex items-center justify-center gap-5">
+          <div className="flex items-center justify-center md:justify-start gap-5">
             {icons.map((it) => (
               <Tooltip key={it.label}>
                 <TooltipTrigger asChild>

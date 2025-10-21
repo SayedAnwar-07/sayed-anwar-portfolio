@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/shared/Navbar";
 import { Toaster } from "react-hot-toast"
+import { Footer } from "@/components/shared/Footer";
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -37,6 +38,7 @@ export default function RootLayout({
           <main className="min-h-screen">
             {children}
           </main>
+          <Footer />
           <Toaster
               position="top-center"
               toastOptions={{

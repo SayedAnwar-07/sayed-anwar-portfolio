@@ -3,6 +3,7 @@
 import { ShimmerButton } from "@/components/ui/shimmer-button"
 import { DottedMap } from "../ui/dotted-map"
 import Social from "../common/Social"
+import CardAutoSlide from "../CardAutoSlide"
 
 export default function Hero() {
   const markers = [
@@ -38,55 +39,65 @@ export default function Hero() {
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background/80 to-muted/30 z-10" />
           {/* Content */}
-          <div className="relative z-10 text-center container mx-auto px-4 sm:px-6 lg:px-8">
-            <div>
-                <Social />
-              </div>
+      <div className="relative z-10 text-center container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row">
+            
+            <div className="w-full">
+               <div className="">
+                    <Social />
+                </div>
 
-            <div className='flex flex-wrap gap-2 sm:gap-3 md:gap-4 mb-4 sm:mb-6 justify-center text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground'>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#bae547] rounded-full animate-pulse" />
-                Full-Stack Developer
-              </div>
-              <div>1.5+ Years Experience</div>
-              <div>Open Source Contributor</div>
+                <div className='flex flex-wrap gap-2 sm:gap-3 md:gap-4 mb-4 sm:mb-6 text-xs sm:text-sm md:text-base justify-center md:justify-start lg:text-lg text-muted-foreground'>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 sm:w-3 sm:h-3 bg-[#bae547] rounded-full animate-pulse" />
+                    Full-Stack Developer
+                  </div>
+                  <div>1.5+ Years Experience</div>
+                  <div>Open Source Contributor</div>
+                </div>
+
+                {/* Name */}
+                <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold flex items-center justify-center md:justify-start gap-2 sm:gap-4 md:gap-6 lg:gap-8 flex-wrap mb-6 md:mb-10">
+                  <span className="whitespace-nowrap bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
+                    Sayed Anwar 
+                  </span>     
+                  <span className="whitespace-nowrap bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent flex items-center justify-center gap-2 md:gap-6">
+                     <div className="relative inline-flex">
+                        <video 
+                          autoPlay 
+                          loop 
+                          muted 
+                          playsInline
+                          className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 xl:w-24 xl:h-24 rounded-full object-cover shadow-lg border-2 border-[#bae547]"
+                        >
+                          <source src="/home.mp4" type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                     </div>
+                      Tamim
+                  </span>
+                </h1>
+
+                <p className="text-center md:text-start text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-muted-foreground leading-relaxed px-2 sm:px-4">
+                  Full Stack Developer with expertise in MERN stack, Django and WordPress
+                  crafting responsive, scalable, and user-friendly websites and applications 
+                  for businesses and individuals.
+                </p>
+
+                {/* Buttons */}
+                 <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+                   <a href="#contact">
+                      <ShimmerButton className="px-6 sm:px-8 py-2 sm:py-3 text-sm md:text-base">
+                        Get In Touch
+                      </ShimmerButton>
+                    </a>
+                 </div>
             </div>
 
-            {/* Name */}
-            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold flex items-center justify-center gap-2 sm:gap-4 md:gap-6 lg:gap-8 flex-wrap mb-6 md:mb-10">
-              <span className="whitespace-nowrap bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
-                Sayed Anwar
-              </span>
-              <div className="relative inline-flex">
-                <video 
-                  autoPlay 
-                  loop 
-                  muted 
-                  playsInline
-                  className="w-14 h-8 sm:w-16 sm:h-10 md:w-24 md:h-12 lg:w-32 lg:h-16 xl:w-24 xl:h-24 rounded-full object-cover shadow-lg border-2 border-[#bae547]"
-                >
-                  <source src="/home.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <span className="whitespace-nowrap bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
-                Tamim
-              </span>
-            </h1>
-
-            <p className="max-w-4xl mx-auto text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-muted-foreground leading-relaxed px-2 sm:px-4">
-              Full Stack Developer with expertise in MERN stack, Django and WordPress
-              crafting responsive, scalable, and user-friendly websites and applications 
-              for businesses and individuals.
-            </p>
-
-            {/* Buttons */}
-            <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4">
-              <ShimmerButton className="px-6 sm:px-8 py-2 sm:py-3 text-sm md:text-base">
-                Get In Touch
-              </ShimmerButton>
+            <div className="w-full">
+              <CardAutoSlide />
             </div>
-          </div>
+
+      </div>             
     </section>
   )
 }
