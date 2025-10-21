@@ -65,19 +65,21 @@ const Projects: FC = () => {
 
                   <div className="flex flex-col md:flex-row gap-3 mt-6">
                     {project.githubLink && (
-                      <div className="p-0 ">
+                      <div className="p-0 w-full sm:w-auto">
                         <a
                           href={project.githubLink}
                           target="_blank"
                           rel="noopener noreferrer"
+                          className="block w-full md:w-auto"
                         >
-                          <ShimmerButton>
-                          <span className="text-sm flex gap-2">View on GitHub <FaGithub className="text-lg font-bold"/></span>
+                          <ShimmerButton className="w-full md:w-auto flex justify-center md:justify-start">
+                            <span className="text-sm flex items-center justify-center md:justify-start gap-2">
+                              View on GitHub <FaGithub className="text-lg font-bold" />
+                            </span>
                           </ShimmerButton>
                         </a>
                       </div>
                     )}
-
                     {project.liveURL && (
                       <AlertDialog>
                         <AlertDialogTrigger asChild>
