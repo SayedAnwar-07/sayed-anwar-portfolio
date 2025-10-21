@@ -175,9 +175,14 @@ export default function ContactForm() {
           </CardContent>
 
           <CardFooter className="border-border border-t p-4 [.border-t]:pt-4">
-            <Button className="w-full" onClick={(e) => handleSubmit(e as any)} disabled={loading}>
+            <Button
+              className="w-full"
+              onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleSubmit(e)}
+              disabled={loading}
+            >
               {loading ? "Sending..." : "Send Message"}
             </Button>
+
           </CardFooter>
         </MagicCard>
       </Card>

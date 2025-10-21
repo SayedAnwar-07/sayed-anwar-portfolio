@@ -63,7 +63,7 @@ export function TechOrbitingCircles() {
         delay={20}
         radius={80}
       >
-        {techLogos.slice(0, 6).map((logo, index) => (
+        {techLogos.slice(0, 6).map((logo) => (
           <div
             key={logo.alt}
             className="flex size-10 items-center justify-center rounded-full border bg-background p-2 shadow-md"
@@ -87,7 +87,7 @@ export function TechOrbitingCircles() {
         radius={150}
         reverse
       >
-        {techLogos.slice(6, 12).map((logo, index) => (
+        {techLogos.slice(6, 12).map((logo) => (
           <div
             key={logo.alt}
             className="flex size-12 items-center justify-center rounded-full border bg-background p-2 shadow-md"
@@ -109,7 +109,7 @@ export function TechOrbitingCircles() {
         duration={20}
         radius={220}
       >
-        {techLogos.slice(12).map((logo, index) => (
+        {techLogos.slice(12).map((logo) => (
           <div
             key={logo.alt}
             className="flex size-10 items-center justify-center rounded-full border bg-background p-2 shadow-md"
