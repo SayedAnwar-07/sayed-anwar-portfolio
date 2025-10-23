@@ -13,8 +13,11 @@ const ubuntu = Ubuntu({
 });
 
 export const metadata: Metadata = {
-  title: "Sayed Anwar Tamim | Web Developer",
+  title: "Sayed Anwar Tamim | Full Stack Web Developer",
   description: "Modern portfolio website built with Next.js, Tailwind & ShadCN UI",
+  icons: {
+    icon: "/logo.jpg", 
+  },
 };
 
 export default function RootLayout({
