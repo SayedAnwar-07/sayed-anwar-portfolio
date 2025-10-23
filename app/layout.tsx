@@ -14,7 +14,7 @@ const ubuntu = Ubuntu({
 
 export const metadata: Metadata = {
   title: "Sayed Anwar Tamim | Full Stack Web Developer",
-  description: "Modern portfolio website built with Next.js, Tailwind & ShadCN UI",
+  description: "Modern portfolio website built with Next.js, Tailwind & ShadCN UI. Full Stack Developer with expertise in MERN stack, Django Rest Framework",
   icons: {
     icon: "/logo.jpg", 
   },
