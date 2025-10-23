@@ -106,7 +106,7 @@ export const myProjects: Project[] = [
       "Role-based JWT authentication for sellers and customers.",
       "Event creation, service management, and reviews.",
     ],
-    githubLink: "https://github.com/SayedAnwar-07/EventraBD",
+    githubLink: "https://github.com/SayedAnwar-07/eventrabd_backend",
     liveURL: "https://eventrabd.netlify.app",
     video: "/EventraBD.mp4",
     tags: [

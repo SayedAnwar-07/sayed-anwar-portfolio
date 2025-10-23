@@ -4,6 +4,10 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { AnimatedThemeToggler } from '../ui/animated-theme-toggler'
 import { Menu, X } from 'lucide-react'
+import Social from '../common/Social'
+import Tamim from "@/public/logo.jpg"
+import Image from 'next/image'
+import { BorderBeam } from '../ui/border-beam'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -11,25 +15,21 @@ export default function Navbar() {
   const [showNavbar, setShowNavbar] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
 
-  // ✅ Scroll behavior: hide on scroll down, show on scroll up (only for mobile & tablet)
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
       setIsScrolled(currentScrollY > 10)
 
-      // detect device width for mobile/tab
       const isMobileOrTablet = window.innerWidth <= 1024
 
       if (isMobileOrTablet) {
         if (currentScrollY > lastScrollY && currentScrollY > 50) {
-          // scrolling down
           setShowNavbar(false)
         } else {
-          // scrolling up
           setShowNavbar(true)
         }
       } else {
-        setShowNavbar(true) // always show for desktop
+        setShowNavbar(true) 
       }
 
       setLastScrollY(currentScrollY)
@@ -39,7 +39,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [lastScrollY])
 
-  // Prevent body scroll when menu is open
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : 'unset'
   }, [isMenuOpen])
@@ -108,10 +107,34 @@ export default function Navbar() {
           : 'opacity-0 invisible'
       }`}>
         <div className="flex items-center justify-center min-h-screen w-full">
+         
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+
             <nav className="flex flex-col items-center justify-center space-y-8">
+
+              {/* short navbar info */}
+              <div className="flex flex-col items-center text-center space-y-4">
+                  <BorderBeam />
+                  <div className="relative w-28 h-28 rounded-full">
+                    <Image 
+                      src={Tamim} 
+                      alt="Tamim Logo" 
+                      fill
+                      style={{ objectFit: 'contain' }}
+                      className="rounded-full"
+                    />
+                  </div>
+                <p className="italic font-medium text-lg">
+                  Sayed Anwar
+                </p>
+                <p className="italic font-light text-base max-w-md">
+                   Let us build something amazing together
+                </p>
+              </div>
+
               {menuItems.map((item, index) => (
                 <div key={item.href} className="overflow-hidden">
+                  
                   <Link
                     href={item.href}
                     className="relative text-4xl md:text-6xl font-bold hover:text-primary transition-all duration-500 group"
@@ -142,11 +165,10 @@ export default function Navbar() {
         {/* Footer Message */}
         <div className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center transition-all duration-1000 ${
           isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}>
-          <p className="text-sm text-muted-foreground mb-4">
-            Let us build something amazing together
-          </p>
-          <div className="flex space-x-4 justify-center"></div>
+        }`}>      
+          <div>
+            <Social />
+          </div>
         </div>
       </div>
     </>

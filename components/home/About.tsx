@@ -132,7 +132,7 @@ export default function About() {
               {/* Overlay with blur and button */}
               <div className="absolute inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <a
-                  href="https://drive.google.com/file/d/1JeYJETyN1FUXVpEcetosDTuouSIaO-tC/view"
+                  href="https://drive.google.com/file/d/1WA1B-Hx9-K8TTnxoPpKxSlEM6NBCE5lK/view"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transform translate-y-12 group-hover:translate-y-0 transition-all duration-500"

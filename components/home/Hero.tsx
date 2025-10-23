@@ -4,6 +4,7 @@ import { ShimmerButton } from "@/components/ui/shimmer-button"
 import { DottedMap } from "../ui/dotted-map"
 import Social from "../common/Social"
 import CardAutoSlide from "../CardAutoSlide"
+import { ExternalLink, Mail } from "lucide-react"
 
 export default function Hero() {
   const markers = [
@@ -84,13 +85,27 @@ export default function Hero() {
                 </p>
 
                 {/* Buttons */}
-                 <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
-                   <a href="#contact">
-                      <ShimmerButton className="px-6 sm:px-8 py-2 sm:py-3 text-sm md:text-base">
-                        Get In Touch
-                      </ShimmerButton>
-                    </a>
-                 </div>
+                <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-col md:flex-row items-center justify-center md:justify-start gap-3 md:gap-4 w-full">
+                  <a href="#contact" className="w-full md:w-auto">
+                    <ShimmerButton className="w-full md:w-auto px-6 sm:px-8 py-3 text-sm md:text-base flex items-center justify-center gap-2 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                      Get In Touch
+                      <Mail size={18} />
+                    </ShimmerButton>
+                  </a>
+
+                  <a
+                    href="https://drive.google.com/file/d/1WA1B-Hx9-K8TTnxoPpKxSlEM6NBCE5lK/view"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full md:w-auto"
+                  >
+                    <ShimmerButton className="w-full md:w-auto px-6 sm:px-8 py-3 text-sm md:text-base flex items-center justify-center gap-2 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                      View Resume
+                      <ExternalLink size={18} />
+                    </ShimmerButton>
+                  </a>
+                </div>
+
             </div>
 
             <div className="w-full">
