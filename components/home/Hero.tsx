@@ -43,7 +43,7 @@ export default function Hero() {
       <div className="relative z-10 text-center container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row">
             
             <div className="w-full">
-               <div className="">
+               <div className="mt-20 sm:mt-4">
                     <Social />
                 </div>
 
@@ -94,7 +94,7 @@ export default function Hero() {
                   </a>
 
                   <a
-                    href="https://drive.google.com/file/d/1WA1B-Hx9-K8TTnxoPpKxSlEM6NBCE5lK/view"
+                    href="https://drive.google.com/file/d/1Ir5dKe83jACHTXCmeGW1mJm6cS0htEfo/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full md:w-auto"
